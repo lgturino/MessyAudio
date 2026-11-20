@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cbe1lwkrpopib"]
+
+[ext_resource type="Script" uid="uid://dieem8mvryl6e" path="res://host/host_main.gd" id="1_u4cql"]
+
+[node name="HostMain" type="Control" unique_id=321322049]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u4cql")
+
+[node name="ScreenContainer" type="Control" parent="." unique_id=1920869665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

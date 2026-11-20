@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b0x5vpjm02r1b"]
+
+[ext_resource type="Script" uid="uid://n3oxovfhdy7h" path="res://host/round_intro.gd" id="1_t8lav"]
+
+[node name="RoundIntro" type="Control" unique_id=277097900]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t8lav")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=216464362]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RoundLabel" type="Label" parent="VBoxContainer" unique_id=533720448]
+layout_mode = 2
+text = "Round 1"
+
+[node name="PromptLabel" type="Label" parent="VBoxContainer" unique_id=1710967723]
+layout_mode = 2
+text = "Worst job interview ever"
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=1933838218]
+layout_mode = 2
+text = "Continue
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1509692971]
