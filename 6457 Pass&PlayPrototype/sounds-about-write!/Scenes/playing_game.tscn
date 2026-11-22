@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://bn8oqj1fvtrxn"]
+
+[ext_resource type="Script" uid="uid://dv5xl2t8rej4e" path="res://Scripts/playing_game.gd" id="1_s1oay"]
+
+[node name="Playing Game" type="Control" unique_id=1823760443]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s1oay")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=81848691]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="SoundContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1344089171]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Sound1" type="Button" parent="VBoxContainer/SoundContainer" unique_id=1045207240]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 59
+text = "1"
+
+[node name="Sound2" type="Button" parent="VBoxContainer/SoundContainer" unique_id=261324889]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 59
+text = "2"
+
+[node name="Sound3" type="Button" parent="VBoxContainer/SoundContainer" unique_id=2122118632]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 59
+text = "3"
+
+[node name="Sound4" type="Button" parent="VBoxContainer/SoundContainer" unique_id=1126544281]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 59
+text = "4"
+
+[node name="Sound5" type="Button" parent="VBoxContainer/SoundContainer" unique_id=1086754013]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 59
+text = "5"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=685185947]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 71
+theme_override_font_sizes/bold_font_size = 22
+text = "Write your story below and submit when you are done!"
+
+[node name="Answer" type="HBoxContainer" parent="VBoxContainer" unique_id=187434588]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Text1" type="TextEdit" parent="VBoxContainer/Answer" unique_id=1796046704]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 75
+placeholder_text = "Text1"
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 1" type="OptionButton" parent="VBoxContainer/Answer" unique_id=1024132317]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "Sound 1"
+popup/item_0/id = 0
+popup/item_1/text = "Sound 2"
+popup/item_1/id = 1
+popup/item_2/text = "Sound 3"
+popup/item_2/id = 2
+popup/item_3/text = "Sound 4"
+popup/item_3/id = 3
+popup/item_4/text = "Sound 5"
+popup/item_4/id = 4
+
+[node name="Text2" type="TextEdit" parent="VBoxContainer/Answer" unique_id=608445849]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 75
+placeholder_text = "Text2"
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 2" type="OptionButton" parent="VBoxContainer/Answer" unique_id=2012149254]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "Sound 1"
+popup/item_0/id = 0
+popup/item_1/text = "Sound 2"
+popup/item_1/id = 1
+popup/item_2/text = "Sound 3"
+popup/item_2/id = 2
+popup/item_3/text = "Sound 4"
+popup/item_3/id = 3
+popup/item_4/text = "Sound 5"
+popup/item_4/id = 4
+
+[node name="Text3" type="TextEdit" parent="VBoxContainer/Answer" unique_id=468299310]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 75
+placeholder_text = "Text3"
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 3" type="OptionButton" parent="VBoxContainer/Answer" unique_id=1650648846]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "Sound 1"
+popup/item_0/id = 0
+popup/item_1/text = "Sound 2"
+popup/item_1/id = 1
+popup/item_2/text = "Sound 3"
+popup/item_2/id = 2
+popup/item_3/text = "Sound 4"
+popup/item_3/id = 3
+popup/item_4/text = "Sound 5"
+popup/item_4/id = 4
+
+[node name="SubmitButton" type="Button" parent="VBoxContainer" unique_id=1528766855]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Round 1: Submit (Player 1)"
+
+[connection signal="pressed" from="VBoxContainer/SoundContainer/Sound1" to="." method="_on_sound_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/SoundContainer/Sound2" to="." method="_on_sound_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/SoundContainer/Sound3" to="." method="_on_sound_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/SoundContainer/Sound4" to="." method="_on_sound_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/SoundContainer/Sound5" to="." method="_on_sound_5_pressed"]
+[connection signal="item_selected" from="VBoxContainer/Answer/Sound Pick 1" to="." method="_on_sound_pick_1_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/Answer/Sound Pick 2" to="." method="_on_sound_pick_2_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/Answer/Sound Pick 3" to="." method="_on_sound_pick_3_item_selected"]
+[connection signal="pressed" from="VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
