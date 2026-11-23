@@ -1,3 +1,10 @@
+# WebSockets
+
+WebSockets allow for bidirectional communication over TCP. By contrast, HTTP requests can only be started by the client. 
+
+
+# General discussion:
+
 [Multiplayer in Godot](https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html#):
 - [High-Level API](https://youtu.be/YnfsyZJRsL8?si=SL4NAdKvs4hjSrnl)
   - sacrificies fine-grained control for ease of use; handling a lot of things behind the scenes

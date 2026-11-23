@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://13xu46sau5s3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v68v4"]
+bg_color = Color(0.49282843, 0.5914864, 0.84963125, 1)
+
+[node name="TextBox" type="PanelContainer" unique_id=1965513836]
+custom_minimum_size = Vector2(160, 60)
+offset_right = 160.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v68v4")
+
+[node name="Label" type="Label" parent="." unique_id=596170138]
+layout_mode = 2
+text = "Hello there"
+horizontal_alignment = 1
+autowrap_mode = 2

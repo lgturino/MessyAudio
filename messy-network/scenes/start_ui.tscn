@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bpeciccpag33t"]
+
+[ext_resource type="PackedScene" uid="uid://0shhnernp5eu" path="res://scenes/message_control.tscn" id="2_305eq"]
+[ext_resource type="PackedScene" uid="uid://13xu46sau5s3" path="res://scenes/text_box.tscn" id="2_ybvj0"]
+[ext_resource type="Script" uid="uid://bdshh3wnbul78" path="res://scripts/message_wall.gd" id="3_3sk5c"]
+[ext_resource type="Script" uid="uid://cpkfqa67v80fa" path="res://scripts/receiver.gd" id="3_ms3qh"]
+[ext_resource type="Script" uid="uid://by2a1ago20vxy" path="res://scripts/host.gd" id="5_bi87a"]
+[ext_resource type="Script" uid="uid://cino1t5hkb8ib" path="res://websocket/web_socket_server.gd" id="5_ms3qh"]
+[ext_resource type="Script" uid="uid://c47pdu6scnhk3" path="res://scripts/connect.gd" id="7_od27i"]
+[ext_resource type="Script" uid="uid://bqwk41mvpmj86" path="res://websocket/web_socket_client.gd" id="8_qhxje"]
+
+[node name="StartUI" type="Control" unique_id=2145343305]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="ColorRect" parent="." unique_id=639316311]
+z_index = -1
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+color = Color(0.2004059, 0.411912, 0.51517934, 1)
+
+[node name="MessageControl" parent="." unique_id=977511203 instance=ExtResource("2_305eq")]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 20.0
+offset_right = 204.0
+offset_bottom = 125.0
+
+[node name="TextBox" parent="." unique_id=1965513836 instance=ExtResource("2_ybvj0")]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 133.0
+offset_right = 189.0
+offset_bottom = 193.0
+script = ExtResource("3_ms3qh")
+
+[node name="MessageWall" type="Control" parent="." unique_id=1960243455]
+anchors_preset = 0
+offset_left = 300.0
+offset_top = 50.0
+offset_right = 500.0
+offset_bottom = 550.0
+script = ExtResource("3_3sk5c")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MessageWall" unique_id=1113197023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Messages" type="VBoxContainer" parent="MessageWall/ScrollContainer" unique_id=1830978192]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Host" type="Button" parent="." unique_id=156576842]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 250.0
+offset_right = 100.0
+offset_bottom = 290.0
+text = "Relay
+"
+script = ExtResource("5_bi87a")
+
+[node name="WebSocketServer" type="Node" parent="Host" unique_id=1348069084]
+script = ExtResource("5_ms3qh")
+
+[node name="Connect" type="Button" parent="." unique_id=1707908339]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 250.0
+offset_right = 200.0
+offset_bottom = 290.0
+text = "Connect
+"
+script = ExtResource("7_od27i")
+
+[node name="WebSocketClient" type="Node" parent="Connect" unique_id=1158289141]
+script = ExtResource("8_qhxje")
+
+[connection signal="message_sent" from="MessageControl" to="TextBox" method="_on_message_control_message_sent"]
+[connection signal="message_sent" from="MessageControl" to="MessageWall" method="_on_message_sent"]
+[connection signal="message_sent" from="MessageControl" to="Connect" method="_on_message_control_message_sent"]
+[connection signal="client_connected" from="Host/WebSocketServer" to="Host" method="_on_web_socket_server_client_connected"]
+[connection signal="message_received" from="Host/WebSocketServer" to="Host" method="_on_web_socket_server_message_received"]
+[connection signal="message_received" from="Connect/WebSocketClient" to="MessageWall" method="_on_web_socket_client_message_received"]
