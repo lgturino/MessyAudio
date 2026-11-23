@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bnf2etskqkdln"]
+
+[ext_resource type="Script" uid="uid://qgpsq6i1l1el" path="res://Scripts/game_start.gd" id="1_ym6pf"]
+
+[node name="Game Start" type="Control" unique_id=2078839612]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ym6pf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1241820884]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1895489917]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Rules: Pick 3 of 5 sounds, arrange them however you like, and write a story around them that fits the prompt."
+editable = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=106954078]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=890501903]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer" unique_id=853155362]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Start Game!"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

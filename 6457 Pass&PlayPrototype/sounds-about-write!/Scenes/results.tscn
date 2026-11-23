@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://bfy50wcwreb0a"]
+
+[ext_resource type="Script" uid="uid://b38qaxp8y7ico" path="res://Scripts/results.gd" id="1_r1how"]
+
+[node name="Results" type="Control" unique_id=409483438]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r1how")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=208396286]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=392799082]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "Round 1 Answers!"
+
+[node name="Answer1" type="HBoxContainer" parent="VBoxContainer" unique_id=201784304]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Text1" type="TextEdit" parent="VBoxContainer/Answer1" unique_id=561317211]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+placeholder_text = "you were walking down a long long road"
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 1" type="Button" parent="VBoxContainer/Answer1" unique_id=1133360178]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Text2" type="TextEdit" parent="VBoxContainer/Answer1" unique_id=1542285306]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 2" type="Button" parent="VBoxContainer/Answer1" unique_id=1262695062]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Text3" type="TextEdit" parent="VBoxContainer/Answer1" unique_id=1704258266]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 3" type="Button" parent="VBoxContainer/Answer1" unique_id=846682481]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Answer2" type="HBoxContainer" parent="VBoxContainer" unique_id=683447996]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Text1" type="TextEdit" parent="VBoxContainer/Answer2" unique_id=1909730681]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+placeholder_text = "you were walking down a long long road"
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 1" type="Button" parent="VBoxContainer/Answer2" unique_id=1988249951]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Text2" type="TextEdit" parent="VBoxContainer/Answer2" unique_id=1094520733]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 2" type="Button" parent="VBoxContainer/Answer2" unique_id=1386380711]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Text3" type="TextEdit" parent="VBoxContainer/Answer2" unique_id=162834256]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+wrap_mode = 1
+autowrap_mode = 2
+
+[node name="Sound Pick 3" type="Button" parent="VBoxContainer/Answer2" unique_id=1538221493]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1767732855]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Continue"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
