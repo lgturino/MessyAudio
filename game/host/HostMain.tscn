@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cbe1lwkrpopib"]
 
+[ext_resource type="Theme" uid="uid://c8c63jpqleqlq" path="res://host/HostTheme.tres" id="1_ddqsk"]
 [ext_resource type="Script" uid="uid://dieem8mvryl6e" path="res://host/host_main.gd" id="1_u4cql"]
+[ext_resource type="Script" uid="uid://gaxyuwhbvtk6" path="res://host/game_manager.gd" id="3_cfvhj"]
 
 [node name="HostMain" type="Control" unique_id=321322049]
 layout_mode = 3
@@ -9,12 +11,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ddqsk")
 script = ExtResource("1_u4cql")
 
-[node name="ScreenContainer" type="Control" parent="." unique_id=1920869665]
+[node name="Background" type="ColorRect" parent="." unique_id=329345216]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.22401339, 0.15673754, 0.48017287, 1)
+
+[node name="ScreenMargins" type="MarginContainer" parent="." unique_id=658766830]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 80
+
+[node name="ScreenContainer" type="Control" parent="ScreenMargins" unique_id=1920869665]
+layout_mode = 2
+
+[node name="GameManager" type="Control" parent="." unique_id=16232295]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_cfvhj")

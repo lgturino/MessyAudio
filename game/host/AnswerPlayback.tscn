@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://fvk1s4ilf6mb"]
+
+[ext_resource type="Script" uid="uid://e6dpm3bwcx8l" path="res://host/answer_playback.gd" id="1_bki48"]
+
+[node name="AnswerPlayback" type="Control" unique_id=1674243829]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bki48")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=560552835]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 79.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoundLabel" type="Label" parent="VBoxContainer" unique_id=1205964875]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="PromptLabel" type="Label" parent="VBoxContainer" unique_id=980952182]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=202025372]
+layout_mode = 2
+
+[node name="Player1Panel" type="PanelContainer" parent="VBoxContainer/HBoxContainer" unique_id=620921369]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Player1Panel" unique_id=591797736]
+layout_mode = 2
+
+[node name="PlayerName" type="Label" parent="VBoxContainer/HBoxContainer/Player1Panel/VBoxContainer" unique_id=1558961917]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="StoryContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Player1Panel/VBoxContainer" unique_id=1344914908]
+layout_mode = 2
+
+[node name="Player2Panel" type="PanelContainer" parent="VBoxContainer/HBoxContainer" unique_id=1301436583]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Player2Panel" unique_id=1145114789]
+layout_mode = 2
+
+[node name="PlayerName" type="Label" parent="VBoxContainer/HBoxContainer/Player2Panel/VBoxContainer" unique_id=686751184]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="StoryContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Player2Panel/VBoxContainer" unique_id=80739338]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=1837711761]
+layout_mode = 2
+text = "Continue"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=642278409]

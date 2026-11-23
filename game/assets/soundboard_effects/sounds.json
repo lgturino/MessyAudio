@@ -1,0 +1,90 @@
+{
+	"among_us": {
+		"name": "among us",
+		"path": "res://assets/soundboard_effects/among-us.mp3"
+	},
+	"boing": {
+		"name": "boing",
+		"path": "res://assets/soundboard_effects/boing.mp3"
+	},
+	"bruh": {
+		"name": "Bruh",
+		"path": "res://assets/soundboard_effects/Bruh.mp3"
+	},
+	"cartoon_ricochet": {
+		"name": "cartoon ricochet",
+		"path": "res://assets/soundboard_effects/cartoon_ricochet.mp3"
+	},
+	"cash_register": {
+		"name": "cash register",
+		"path": "res://assets/soundboard_effects/cash_register.mp3"
+	},
+	"city_traffic": {
+		"name": "city traffic",
+		"path": "res://assets/soundboard_effects/city_traffic.mp3"
+	},
+	"clown_horn": {
+		"name": "clown horn",
+		"path": "res://assets/soundboard_effects/clown_horn.mp3"
+	},
+	"cute_tee_hee": {
+		"name": "Cute Tee Hee",
+		"path": "res://assets/soundboard_effects/Cute_Tee_Hee.mp3"
+	},
+	"drift": {
+		"name": "drift",
+		"path": "res://assets/soundboard_effects/drift.mp3"
+	},
+	"explosion": {
+		"name": "explosion",
+		"path": "res://assets/soundboard_effects/explosion.mp3"
+	},
+	"faaah": {
+		"name": "faaah",
+		"path": "res://assets/soundboard_effects/faaah.mp3"
+	},
+	"fart_with_reverb": {
+		"name": "fart with reverb",
+		"path": "res://assets/soundboard_effects/fart-with-reverb.mp3"
+	},
+	"forward": {
+		"name": "forward",
+		"path": "res://assets/soundboard_effects/forward.mp3"
+	},
+	"glass_breaking": {
+		"name": "glass breaking",
+		"path": "res://assets/soundboard_effects/glass-breaking.mp3"
+	},
+	"gong": {
+		"name": "gong",
+		"path": "res://assets/soundboard_effects/gong.mp3"
+	},
+	"ohhh_yeahhh": {
+		"name": "ohhh yeahhh",
+		"path": "res://assets/soundboard_effects/ohhh_yeahhh.mp3"
+	},
+	"rewind": {
+		"name": "rewind",
+		"path": "res://assets/soundboard_effects/rewind.mp3"
+	},
+	"rizz": {
+		"name": "rizz",
+		"path": "res://assets/soundboard_effects/rizz.mp3"
+	},
+	"siren": {
+		"name": "Siren",
+		"path": "res://assets/soundboard_effects/Siren.mp3"
+	},
+	"stand_clear_of_the_closing_doors_please": {
+		"name": "stand clear of the closing doors please",
+		"path": "res://assets/soundboard_effects/stand-clear-of-the-closing-doors-please.mp3"
+	},
+	"suggestive_whistle": {
+		"name": "suggestive whistle",
+		"path": "res://assets/soundboard_effects/suggestive_whistle.mp3"
+	},
+	"violin_screech": {
+		"name": "violin screech",
+		"path": "res://assets/soundboard_effects/violin-screech.mp3"
+	}
+}
